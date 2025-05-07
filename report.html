@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title> Reports - AgriHorti Vision</title>
+  <link rel="stylesheet" href="css/style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js"></script>
+  <script src="js/report.js" defer></script>
+</head>
+
+<body>
+  <div class="card">
+    <h1> Disease Reports</h1>
+
+    <div id="latestReport"></div>
+
+    <button onclick="downloadPDF()">Download as PDF</button><br>
+    <a href="analyze.html"><button>Analyze Another Image</button></a>
+  </div>
+
+  <div class="bottom-nav">
+    <a href="index.html">🏠 Home</a>
+    <a href="analyze.html">🔍 Analyze</a>
+    <a href="report.html">📄 Report</a>
+    <a href="history.html">📜 History</a>
+  </div>
+</body>
+</html>

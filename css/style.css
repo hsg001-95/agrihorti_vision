@@ -1,0 +1,119 @@
+body {
+  font-family: 'Poppins', sans-serif;
+  margin: 0;
+  padding-bottom: 70px;
+  background: linear-gradient(to bottom right, #f0fff0, #e0ffe0);
+  color: #333;
+  text-align: center;
+}
+
+h1 {
+  color: #006400;
+}
+
+.subtitle {
+  color: #228B22;
+  font-size: 18px;
+  margin-bottom: 20px;
+}
+
+.highlight {
+  color: #2e8b57;
+}
+
+.card {
+  background-color: #ffffff;
+  margin: 30px auto;
+  padding: 30px;
+  border-radius: 16px;
+  box-shadow: 0 8px 16px rgba(0,0,0,0.1);
+  width: 90%;
+  max-width: 600px;
+}
+
+button {
+  background-color: #28a745;
+  color: white;
+  padding: 14px 30px;
+  margin: 10px;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  font-size: 18px;
+  transition: 0.3s ease;
+}
+
+button:hover {
+  background-color: #218838;
+}
+
+#preview {
+  margin-top: 10px;
+  border-radius: 10px;
+  border: 2px solid #28a745;
+}
+
+#result,
+#latestReport,
+#historyReports div {
+  background-color: #f8fff8;
+  padding: 20px;
+  margin: 20px 0;
+  border: 2px dashed #28a745;
+  border-radius: 12px;
+  text-align: left;
+}
+
+#loading {
+  color: #ff5722;
+  font-weight: bold;
+  margin-top: 10px;
+}
+
+input[type="file"],
+input[type="date"] {
+  margin: 15px;
+  padding: 10px;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+  width: 70%;
+}
+
+.bottom-nav {
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  background: #28a745;
+  padding: 12px 0;
+  display: flex;
+  justify-content: space-around;
+  font-size: 18px;
+}
+
+.bottom-nav a {
+  color: white;
+  text-decoration: none;
+  font-weight: 600;
+}
+
+.bottom-nav a:hover {
+  text-decoration: underline;
+}
+
+.history-item {
+  background-color: #ffffff;
+  border: 2px solid #28a745;
+  margin: 10px auto;
+  padding: 15px;
+  width: 90%;
+  max-width: 500px;
+  border-radius: 12px;
+  cursor: pointer;
+  transition: 0.3s ease;
+}
+
+.history-item:hover {
+  background-color: #d4edda;
+}
+
+  

@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Analyze Crop - AgriHorti Vision</title>
+  <link rel="stylesheet" href="css/style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+  <script src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs"></script>
+  <script src="js/model.js" defer></script>
+  <script src="js/analyze.js" defer></script>
+</head>
+
+<body>
+  <div class="card">
+    <h1>Analyze Your Crop Disease</h1>
+
+    <!-- Upload image from file -->
+    <input type="file" id="imageUpload" accept="image/*"><br><br>
+    <img id="preview" width="200" style="display:none;"><br><br>
+
+    <button onclick="analyzeImage()">Analyze</button>
+
+    <hr style="margin: 20px 0;">
+
+  
+    <button onclick="startCamera()">📷  Camera</button><br><br>
+    <video id="cameraStream" autoplay style="display:none; width: 300px;"></video><br>
+    <button onclick="captureImage()" style="display:none;" id="captureBtn">📸 Capture Image</button><br><br>
+    <canvas id="snapshotCanvas" style="display:none;"></canvas>
+
+    <div id="loading" style="display:none;">Analyzing... Please Wait</div>
+  </div>
+
+  <div class="bottom-nav">
+    <a href="index.html">🏠 Home</a>
+    <a href="analyze.html">🔍 Analyze</a>
+    <a href="report.html">📄 Report</a>
+    <a href="history.html">📜 History</a>
+  </div>
+</body>
+</html>
