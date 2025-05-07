@@ -29,9 +29,7 @@ AgriHorti Vision is developed to work fully **offline after first load**, ensuri
 ---
 
 ## 🎥 Video Explanation
-[👉 Click here to watch the full project demo](#)
-
-*(Replace `#` with your actual YouTube video link once available.)*
+https://photos.app.goo.gl/TFEjTjRUq9ABQ6CY6
 
 ---
 
