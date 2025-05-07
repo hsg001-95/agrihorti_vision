@@ -126,12 +126,22 @@ async function analyzeImage() {
   };
 }
 let videoStream;
+let useBackCamera = true;
 
 function startCamera() {
   const video = document.getElementById("cameraStream");
   const captureBtn = document.getElementById("captureBtn");
 
-  navigator.mediaDevices.getUserMedia({ video: true })
+
+  if (videoStream) {
+    videoStream.getTracks().forEach(track => track.stop());
+  }
+
+  const constraints = {
+    video: { facingMode: useBackCamera ? { exact: "environment" } : "user" }
+  };
+
+  navigator.mediaDevices.getUserMedia(constraints)
     .then(stream => {
       videoStream = stream;
       video.srcObject = stream;
@@ -139,10 +149,11 @@ function startCamera() {
       captureBtn.style.display = "inline";
     })
     .catch(err => {
-      alert("Camera access denied or not available.");
+      alert("Requested camera not available.");
       console.error(err);
     });
 }
+
 
 function captureImage() {
   const video = document.getElementById("cameraStream");
@@ -227,3 +238,12 @@ async function analyzeFromBlob(blob) {
     window.location.href = "report.html";
   };
 }
+document.addEventListener("DOMContentLoaded", () => {
+  const video = document.getElementById("cameraStream");
+  if (video) {
+    video.addEventListener("dblclick", () => {
+      useBackCamera = !useBackCamera;
+      startCamera();
+    });
+  }
+});
